@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DLLs\**" />
+    <EmbeddedResource Remove="DLLs\**" />
+    <None Remove="DLLs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Celeste64">
+      <HintPath>../../../bin/x64/Debug/net8.0/Celeste64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
